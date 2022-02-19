@@ -3,9 +3,9 @@ public class Product implements IDedObject{
     private String productName;
     private String supplierName;
     public Product(int ID,String prodName,String suppName){
-        productID=ID;
-        productName=prodName;
-        supplierName=suppName;
+        this.productID=ID;
+        this.productName=prodName;
+        this.supplierName=suppName;
     }
 
     public int getID(){
@@ -16,6 +16,5 @@ public class Product implements IDedObject{
         System.out.println("Product ID: "+this.productID);
         System.out.println("Product Name: "+this.productName);
         System.out.println("Supplier Name: "+this.supplierName);
-        return;
     }
 }
