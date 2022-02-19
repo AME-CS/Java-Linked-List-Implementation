@@ -23,23 +23,24 @@ public class LinkedList <AnyType extends IDedObject>{
             }
             currNode=currNode.next;
         }
-        System.out.println("ID: "+ID+" is not present in this list.");
+        System.out.println("\t\tID: "+ID+" is not present in this list.");
         return null;
     }
     public boolean insertAtFront(AnyType x){
         if (this.head!=null && this.head.data.getID()==x.getID()){
             return false;
         }
-        Node newHead=new Node(x,head);
-        this.head=newHead;
+        this.head= new Node(x,head);
         return true;
     }
     public AnyType deleteFromFront(){
         if (this.head==null){
+            System.out.println("\t\tList is empty.");
             return null;
         }
+        System.out.println("\t\tDeleted Product Details:");
         this.head.data.printID();
-        System.out.println();
+        System.out.println("\t\tFirst Item Deleted.");
         this.head=head.next;
         return null;
     }
@@ -53,6 +54,7 @@ public class LinkedList <AnyType extends IDedObject>{
                     deleteFromFront();
                     return null;
                 }
+                System.out.println("\t\tDeleted Product Details:");
                 currNode.data.printID();
                 prevNode.next=currNode.next;
                 return null;
@@ -61,18 +63,22 @@ public class LinkedList <AnyType extends IDedObject>{
             currNode=currNode.next;
             i++;
         }
+        System.out.println("\t\tID: "+ID+" is not present in this list.");
         return null;
 
     }
     public void printAllRecords() {
         if (this.head == null) {
-            System.out.println("Linked List is empty");
+            System.out.println("\t\tNo Records Found");
             return;
         }
         Node currNode = this.head;
+        int i=1;
         while (currNode != null) {
+            System.out.println("\n\t\tProduct "+i+" Details:");
             currNode.data.printID();
             currNode = currNode.next;
+            i++;
         }
     }
 }

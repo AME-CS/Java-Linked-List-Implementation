@@ -13,8 +13,8 @@ public class Product implements IDedObject{
     }
 
     public void printID() {
-        System.out.println("Product ID: "+this.productID);
-        System.out.println("Product Name: "+this.productName);
-        System.out.println("Supplier Name: "+this.supplierName);
+        System.out.println("\t\tProduct ID: "+this.productID);
+        System.out.println("\t\tProduct Name: "+this.productName);
+        System.out.println("\t\tSupplier Name: "+this.supplierName);
     }
 }
